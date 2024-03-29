@@ -1,0 +1,131 @@
+/**
+ * Do not modifying code in this section.
+ * Start writing your code after this section.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 36px;
+}
+
+h2 {
+  color: #434343;
+  border-bottom: 2px solid #434343;
+  padding-bottom: 12px;
+  margin-top: 0px;
+  margin-bottom: 36px;
+}
+
+.spacer {
+  padding: 48px;
+}
+
+.card {
+  padding: 24px;
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.button {
+  background: none;
+  background-color: orange;
+  cursor: pointer;
+  padding: 20px 32px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.link {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+}
+
+/*
+ * Start modifying code below
+*/
+
+/* Exercise 1 */
+
+.button {
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e29302;
+}
+
+.button:active {
+  background-color: #bd7500;
+}
+
+/* Exercise 2 */
+
+.card {
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.card:hover {
+  transform: translateY(-24px);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card:active {
+  transform: translateY(-12px);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Exercise 3 */
+
+.link {
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: orange;
+  z-index: -1;
+  height: 14px;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+/* .link {
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: orange;
+  z-index: -1;
+  height: 14px;
+  width: 100%;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+   transform-origin: left;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
